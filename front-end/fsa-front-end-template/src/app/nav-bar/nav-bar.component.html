@@ -1,0 +1,11 @@
+<nav>
+  <a routerLink="/">
+    <h1 class="app-heading">Meal Tracker</h1>
+  </a>
+  <ng-container *ngIf="auth.user | async as user">
+    <button class="sign-out-button" (click)="onClickSignOut()">
+      Çıkış Yap
+    </button>
+    <p class="logged-in-as space-before">{{ user.email }} olarak giriş yap.</p>
+  </ng-container>
+</nav>
